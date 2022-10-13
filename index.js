@@ -32,8 +32,8 @@ const MongoDBStore=require("connect-mongo")(session);
 //process.env.DB_URL || 
 //process.env.SECRET ||
 
-const dbUrl= 'mongodb://localhost:27017/taskTwo';
-const secret= 'thisshouldbeabettersecret';
+const dbUrl= process.env.DB_URL || 'mongodb://localhost:27017/taskTwo';
+const secret= process.env.SECRET || 'thisshouldbeabettersecret';
 
 
 main().catch(err => console.log(err));
