@@ -1,0 +1,21 @@
+<%layout('layouts/boilerplate')%>
+
+<%if(user.length==0){%>
+    <div class="text-center">
+        <img src="https://svgur.com/i/AXk.svg" class="rounded" alt="..." style="width: 400px; height: 400px">
+      </div>
+<%}%>
+<%if(user.length!=0){%>
+    <h1 class="text-center">ALL SEARCHES FOUND</h1>
+<%}%>
+
+<%for(let i=0;i<user.length;i++){%>
+    <div class="md-3 mb-3 offset-4">
+        <div class="card" style="width: 35rem;">
+            <a href="/random/image/<%=user[i]._id%>" class="btn"><img src="<%=user[i].image[0].url%>" alt="" style="width:150px; height:150px"></a>
+            <div class="card-body">
+              <h5 class="card-title text-center"><%=user[i].name%></h5>
+            </div>
+          </div>
+        </div>
+<%}%>

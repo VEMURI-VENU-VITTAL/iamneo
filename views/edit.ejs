@@ -1,0 +1,55 @@
+<%layout('layouts/boilerplate')%>
+
+
+<div class="row">
+    <h1 class="text-center">ADDING USER DETAILS</h1>
+    <div class="col-6 offset-4">
+            <form action="/random/image/<%=auth._id%>?_method=put" method="post" class="row g-3" enctype="multipart/form-data">
+                <div class="md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="<%=auth.name%>">
+                  </div>
+                <div class="md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" value="<%=auth.email%>">
+                </div>
+                <div class="md-6">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" value="<%=auth.password%>">
+                </div>
+                <div class="md-6">
+                    <label for="country" class="form-label">country</label>
+                    <input type="text" class="form-control" id="country" name="country" value="<%=auth.country%>">
+                  </div>
+                <div class="md-6">
+                  <label for="address" class="form-label">Address</label>
+                  <textarea type="text" class="form-control" id="address" placeholder="1234 Main St" name="address"><%=auth.address%></textarea>
+                </div>
+                <div class="md-6">
+                  <label for="number" class="form-label">number</label>
+                  <input type="text" class="form-control" id="number" name="number" value="<%=auth.number%>">
+                </div>
+                <div class="md-6">
+                    <label for="dob" class="form-label">dob</label>
+                    <input type="text" class="form-control" id="dob" placeholder="DD/MM/YYYY" name="dob" value="<%=auth.dob%>">
+                  </div>
+                  <div class="md-6">
+                    <select class="form-select" aria-label="Disabled select example" name="gender">
+                        <option selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Not preferred">Not preferred to say</option>
+                      </select>
+                  </div>
+                  <div class="md-6">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="image" placeholder="image upload" name="image" value="<%=auth.image%>">
+                  </div>
+        
+                <div class="col-12">
+                  <button type="submit" class="btn btn-info">EDIT</button>
+                </div>
+            </form>
+    </div>
+</div>
+

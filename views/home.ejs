@@ -1,0 +1,99 @@
+<%layout('layouts/boilerplate')%>
+
+
+    <div class="md-3 offset-3">
+        <h1>Random User Generator</h1>
+    
+    <div class="card" style="width: 35rem;">
+        <%if(!newuser.image){%>
+          <img src="https://tse1.mm.bing.net/th?id=OIP.SmI8KKz6-GZJPWNXGUuymQAAAA&pid=Api&P=0" class="card-img-top" alt="..." style="width:150px; height:150px; border-radius: 50%; margin-left: 35%;">
+        <%}%>
+        <img src="<%=newuser.image[0].url%>" class="card-img-top" alt="..." style="width:150px; height:150px; border-radius: 50%; margin-left: 35%;">
+        <hr>
+        <div class="card-body">
+          <h5 class="c1 card-title"><%=newuser.name%></h5>
+          <div class="mb-3">
+            <button class="b1 btn btn-primary" style="margin-left:35px;"><img src="https://tse4.mm.bing.net/th?id=OIP.jPpVGcIUih5YWhUYbSKcwgHaHk&pid=Api&P=0" alt="" style="width:20px ; height: 20px;"></button>
+            <button class="b2 btn btn-info" style="margin-left:15px;">&#9742;</button>
+            <button class="bc btn btn-success" style="margin-left:15px;"><img src="https://tse4.mm.bing.net/th?id=OIP.xcn-dZD8aZa1TNEz0t_vawHaHa&pid=Api&P=0" alt="" style="width:20px ; height: 20px;"></button>
+            <button class="b3 btn btn-danger" style="margin-left:15px;"><img src="https://f0.pngfuel.com/png/816/649/map-computer-icons-flat-design-location-logo-location-icon-png-clip-art.png" alt="" style="width:20px ; height: 20px;"></button>
+            <button class="b4 btn btn-success" style="margin-left:15px;"><img src="https://www.logolynx.com/images/logolynx/c7/c7076127e9f68296f973bd84b0a31bd8.png" alt="" style="width:20px ; height: 20px;"></button>
+            <button class="b5 btn btn-warning" style="margin-left:15px;"><img src="https://static.vecteezy.com/system/resources/previews/000/362/480/original/lock-vector-icon.jpg" alt="" style="width:20px ; height: 20px;"></button>
+            <button class="bl btn btn-info" style="margin-left:15px;"><img src="https://tse1.mm.bing.net/th?id=OIP.uL6CG0ElEW0cSs5XqpUiJQHaHa&pid=Api&P=0" alt="" style="width:20px ; height: 20px;"></button>
+          </div>
+          
+          <a href="/random" class="btn btn-primary" style="margin-left: 40%;">Generate</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script>let b1=document.querySelector(".b1")
+     let data = `<%-newuser.name%>`
+     
+    b1.addEventListener('mouseover',function(){
+      console.log(data);
+        let c1=document.querySelector(".c1")
+        c1.innerText=data;
+    })
+    </script>
+
+<script>let b2=document.querySelector(".b2")
+  let data1 = `<%-newuser.number%>`
+  
+ b2.addEventListener('mouseover',function(){
+   console.log(data1);
+     let c1=document.querySelector(".c1")
+     c1.innerText=data1;
+ })
+ </script>
+
+<script>let bc=document.querySelector(".bc")
+  let data10 = `<%-newuser.country%>`
+  
+ bc.addEventListener('mouseover',function(){
+   console.log(data);
+     let c1=document.querySelector(".c1")
+     c1.innerText=data10;
+ })
+ </script>
+
+<script>let b3=document.querySelector(".b3")
+  let data2 = `<%-newuser.address%>`
+  
+ b3.addEventListener('mouseover',function(){
+   console.log(data);
+     let c1=document.querySelector(".c1")
+     c1.innerText=data2;
+ })
+ </script>
+
+<script>let b4=document.querySelector(".b4")
+  let data3 = `<%-newuser.email%>`
+  
+ b4.addEventListener('mouseover',function(){
+   console.log(data);
+     let c1=document.querySelector(".c1")
+     c1.innerText=data3;
+ })
+ </script>
+
+<script>let b5=document.querySelector(".b5")
+  let data4 = `<%-newuser.password%>`
+  
+ b5.addEventListener('mouseover',function(){
+   console.log(data);
+     let c1=document.querySelector(".c1")
+     c1.innerText=data4;
+ })</script>
+
+ <script>let bl=document.querySelector(".bl")
+  let data5 = `<%-newuser.dob%>`
+  
+ bl.addEventListener('mouseover',function(){
+   console.log(data);
+     let c1=document.querySelector(".c1")
+     c1.innerText=data5;
+ })</script>
+
+ 

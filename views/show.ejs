@@ -1,0 +1,30 @@
+<%layout('layouts/boilerplate')%>
+
+    
+
+
+
+    <div class="card" style="width: 18rem; margin-left: 40%;">
+      <img src="<%=user.image[0].url%>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%=user.name%></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><img src="https://www.logolynx.com/images/logolynx/c7/c7076127e9f68296f973bd84b0a31bd8.png" alt="" style="width:20px ; height: 20px;"> <%=user.email%></li>
+        <li class="list-group-item"><img src="https://static.vecteezy.com/system/resources/previews/000/362/480/original/lock-vector-icon.jpg" alt="" style="width:20px ; height: 20px;"> <%=user.password%></li>
+        <li class="list-group-item">&#9742; <%=user.number%></li>
+        <li class="list-group-item"><img src="https://tse4.mm.bing.net/th?id=OIP.xcn-dZD8aZa1TNEz0t_vawHaHa&pid=Api&P=0" alt="" style="width:20px ; height: 20px;"> <%=user.country%></li>
+        <li class="list-group-item"><img src="https://f0.pngfuel.com/png/816/649/map-computer-icons-flat-design-location-logo-location-icon-png-clip-art.png" alt="" style="width:20px ; height: 20px;"> <%=user.address%></li>
+        <li class="list-group-item"><img src="https://tse1.mm.bing.net/th?id=OIP.uL6CG0ElEW0cSs5XqpUiJQHaHa&pid=Api&P=0" alt="" style="width:20px ; height: 20px;"> <%=user.dob%></li>
+      </ul>
+      <%if(currentUser && user.author.equals(currentUser._id)){%>
+      <div class="card-body">
+        <a href="/random/image/<%=user._id%>/edit" class="btn btn-info">EDIT</a>
+        <form class="d-inline" action="/random/<%=user._id%>?_method=delete" method="post">
+          <button class="btn btn-danger">Delete</button>
+      </form>
+      </div>
+      <%}%>
+    </div>
+
+    
