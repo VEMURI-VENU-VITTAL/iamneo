@@ -327,7 +327,7 @@ app.use((req,res,next)=>{
     res.status(statusCode).render('error.ejs',{err});
   })
 
-  const port=3080
+  const port=process.env.PORT || 3000;
   app.listen(port, ()=>{
     console.log(`serving on port ${port}!`);
 })
